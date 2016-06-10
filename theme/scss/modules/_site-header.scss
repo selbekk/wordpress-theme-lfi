@@ -4,6 +4,13 @@
 }
 
 .site-header-logo {
-    color: white;
-    margin: 0;
+    display: block;
+    fill: white;
+    margin: 0 auto;
+    width: 50px;
+
+    @include laptop {
+        margin: 0;
+        width: 100px;
+    }
 }
