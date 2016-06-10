@@ -1,0 +1,14 @@
+# Dependencies
+theme/node_modules/
+
+# Vagrant specifics
+.vagrant/
+
+# The mirrored dev environment
+site/
+
+# Log files
+*.log
+
+# OS specifics
+.DS_Store

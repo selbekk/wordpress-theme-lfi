@@ -1,0 +1,12 @@
+{
+  "name": "lfi",
+  "version": "1.0.0",
+  "description": "Lillestrøm Fysikalske Institutt",
+  "scripts": {
+    "build": "webpack",
+    "dist": "webpack -p",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "Kristofer Selbekk <kristofer@selbekk.io>",
+  "license": "ISC"
+}
