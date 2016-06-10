@@ -1,3 +1,5 @@
 <?php include_once('header.php'); ?>
-<h1>Hello world</h1>
+<div class="wrapper">
+    <h1>Front page</h1>
+</div>
 <?php include_once('footer.php'); ?>

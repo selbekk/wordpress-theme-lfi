@@ -7,6 +7,9 @@ theme/node_modules/
 # The mirrored dev environment
 site/
 
+# Built files
+theme/app/resources
+
 # Log files
 *.log
 

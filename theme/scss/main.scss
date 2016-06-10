@@ -1,3 +1,14 @@
-body {
-    background: coral;
-}
+// Reset
+@import "~normalize.css/normalize.css";
+
+// Variables and mixins
+@import "variables";
+@import "media-queries";
+
+// Core styles
+@import "fonts";
+@import "core";
+
+// Modules
+@import "modules/wrapper";
+@import "modules/site-header";
