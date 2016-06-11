@@ -1,10 +1,16 @@
 // Colors
 $color-primary: #0375BE; // light blue
+
 $color-secondary: #01385B; // dark blue
+$color-secondary: darken($color-secondary, 10%);;
 
 $color-tertiary: #34BE68; // green
 $color-tertiary-dark: darken($color-tertiary, 10%);
 
-$color-white: #F2F2F0; // off-white
-$color-grey: #787878; // grey
-$color-grey-darkest: #222222; // almost black
+$color-white: #fff;
+$color-grey-lighter: #F4F6F9;
+$color-grey-light: #E5E7E9;
+$color-grey: #8A9097;
+$color-grey-dark: #5E6265;
+$color-grey-darker: #4D5256;
+$color-black: #000;

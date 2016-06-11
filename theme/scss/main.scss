@@ -4,6 +4,7 @@
 // Variables and mixins
 @import "variables";
 @import "media-queries";
+@import "mixins";
 
 // Core styles
 @import "fonts";
@@ -15,3 +16,5 @@
 @import "modules/site-header";
 @import "modules/image-section";
 @import "modules/button";
+@import "modules/block-section";
+@import "modules/entrances";

@@ -3,8 +3,8 @@
     border: none;
     color: white;
     display: inline-block;
-    font-size: 130%;
-    padding: .5em 1.5em;
+    font-size: 100%;
+    padding: 20px 40px;
     text-transform: uppercase;
     text-decoration: none;
     transition: all .1s ease-out;
@@ -12,16 +12,18 @@
     &:focus,
     &:hover {
         background: $color-tertiary-dark;
+        color: currentColor;
     }
 
     &:active {
+        color: currentColor;
         transform: scale(1.02);
     }
 }
 
 .button.mod-large {
     @include laptop {
-        font-size: 150%;
+        font-size: 130%;
     }
 }
 

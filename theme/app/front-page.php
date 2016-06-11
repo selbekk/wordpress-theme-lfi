@@ -13,4 +13,25 @@
         </div>
     </div>
 </section>
+<section class="block-section">
+    <div class="block-section-inner">
+        <div class="entrances">
+            <a href="#" class="entrance">
+                <h3 class="entrance-text">Fysioterapi</h3>
+            </a>
+            <a href="#" class="entrance">
+                <h3 class="entrance-text">Treningssenter</h3>
+            </a>
+            <a href="#" class="entrance">
+                <h3 class="entrance-text">Personlig oppfølging</h3>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="block-section">
+    <div class="block-section-inner"></div>
+</section>
+<section class="block-section">
+    <div class="block-section-inner"></div>
+</section>
 <?php include_once('footer.php'); ?>
