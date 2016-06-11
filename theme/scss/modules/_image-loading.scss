@@ -1,0 +1,8 @@
+.image-loader {
+    transition: all .2s ease-out;
+
+    &.is-loading {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

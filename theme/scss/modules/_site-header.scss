@@ -1,11 +1,12 @@
 .site-header {
-    background-color: $color-primary;
+    background-color: $color-white;
+    color: $color-primary;
     padding: 1em 0;
 }
 
 .site-header-logo {
     display: block;
-    fill: white;
+    fill: currentColor;
     margin: 0 auto;
     width: 50px;
 

@@ -3,10 +3,22 @@
 }
 
 .entrance {
-    align-items: flex-end;
-    background-color: $color-grey;
     color: white;
     display: block;
+    padding: 1em;
+}
+
+.entrance-link {
+    background-color: $color-grey-light;
+    color: $color-grey-dark;
+    display: block;
+    padding: 1em;
+    transition: background-color .1s ease-out;
+
+    &:focus,
+    &:hover {
+        background-color: $color-grey-lighter;
+    }
 }
 
 .entrance-text {
