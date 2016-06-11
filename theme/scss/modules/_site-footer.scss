@@ -1,0 +1,35 @@
+.site-footer {
+    background-color: $color-primary-dark;
+    color: $color-white;
+}
+
+.site-footer-top {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+
+    @include laptop {
+        flex-direction: row;
+    }
+}
+
+.site-footer-section {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.site-footer-bottom {
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.site-footer-link {
+    color: $color-white;
+    font-weight: bold;
+
+    &:hover {
+        color: $color-grey-light;
+        text-decoration: underline;
+    }
+}

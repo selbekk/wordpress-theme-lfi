@@ -4,10 +4,12 @@
     color: $color-white;
     display: inline-block;
     font-size: 100%;
-    padding: 20px 40px;
-    text-transform: uppercase;
+    padding: 1em 2em;
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all .1s ease-out;
+    width: 100%;
 
     &:focus,
     &:hover {
@@ -19,6 +21,10 @@
         color: currentColor;
         transform: scale(1.02);
     }
+
+    @include tablet {
+        width: auto;
+    }
 }
 
 .button.mod-large {
@@ -27,10 +33,22 @@
     }
 }
 
+.button.mod-full-width {
+    width: 100%;
+}
+
 .button-group {
     margin: 1.5em 0;
 }
 
 .button-group.mod-centered {
     text-align: center;
+}
+
+.button-group > .button {
+    margin-bottom: 0.5em;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }

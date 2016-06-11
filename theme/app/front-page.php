@@ -38,28 +38,32 @@
 </section>
 <section class="block-section mod-colored">
     <div class="block-section-inner">
-        <h2>Finn riktig behandling</h2>
-        <p class="lead">
-            Hvis du opplever plager eller lorem ipsum dolor sit amet,
-            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-        </p>
+        <div class="wrapper">
+            <h2>Finn riktig behandling</h2>
+            <p class="lead">
+                Hvis du opplever plager eller lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+            </p>
+        </div>
     </div>
 </section>
 <section class="block-section">
     <div class="block-section-inner">
-        <blockquote class="testimonial">
-            Ryggproblemene forsvant etter kun noen få timers behandling. Kunne
-            ikke vært mer fornøyd!
-            <cite>Eksempel Hansen</cite>
-        </blockquote>
-        <div class="button-group mod-centered">
-            <a href="#" class="button">Les flere referanser</a>
+        <div class="wrapper">
+            <blockquote class="testimonial">
+                Ryggproblemene forsvant etter kun noen få timers behandling. Kunne
+                ikke vært mer fornøyd!
+                <cite>Eksempel Hansen</cite>
+            </blockquote>
+            <div class="button-group mod-centered">
+                <a href="#" class="button">Les flere referanser</a>
+            </div>
         </div>
     </div>
 </section>

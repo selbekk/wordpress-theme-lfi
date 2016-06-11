@@ -1,0 +1,5 @@
+.visible-phone {
+    @include tablet {
+        display: none !important;
+    }
+}

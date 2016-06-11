@@ -6,6 +6,9 @@
 @import "media-queries";
 @import "mixins";
 
+// Utilities
+@import "responsive-utils";
+
 // Core styles
 @import "fonts";
 @import "core";
@@ -14,9 +17,11 @@
 // Modules
 @import "modules/wrapper";
 @import "modules/site-header";
+@import "modules/site-footer";
 @import "modules/image-section";
 @import "modules/button";
 @import "modules/block-section";
 @import "modules/entrances";
 @import "modules/image-loading";
 @import "modules/testimonial";
+@import "modules/simple-list";

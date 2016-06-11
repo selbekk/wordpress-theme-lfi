@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div class="site-container">
+    <div class="site-container" id="top">
         <header class="site-header">
             <div class="wrapper">
                 <svg class="site-header-logo" viewBox="0 0 526 263">
