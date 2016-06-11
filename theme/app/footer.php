@@ -18,58 +18,9 @@
                     </div>
                     <div class="site-footer-section">
                         <h3>Spesialiseringer</h3>
-                        <ul class="simple-list">
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Fysioterapi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Kiropraktikk
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Manuellterapi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Idrettsfysiologi
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Treningssenter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Redcord / slyngetrening
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Trykkbølge
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Kinesiotaping
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Triggerpunktsbehandling
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="site-footer-link">
-                                    Bassengtrening
-                                </a>
-                            </li>
-                        </ul>
+                        <nav class="site-footer-menu">
+                            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+                        </nav>
                     </div>
                     <div class="site-footer-section">
                         <h3>Åpningstider</h3>
