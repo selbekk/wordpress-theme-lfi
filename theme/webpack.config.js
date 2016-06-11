@@ -23,6 +23,13 @@ module.exports = {
         }
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                loaders: ['eslint'],
+                include: path.join(__dirname, 'js')
+            }
+        ],
         loaders: [
             {
                 test: /\.scss$/,

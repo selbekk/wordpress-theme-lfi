@@ -6,14 +6,14 @@ export default function loadImages() {
         loadable.classList.add('is-loading');
         const image = new Image();
         image.addEventListener('load', () => {
-            if(loadable.tagName === 'IMG') {
+            if (loadable.tagName === 'IMG') {
                 loadable.src = image.src;
-            }
-            else {
+            } else {
                 loadable.style.backgroundImage = `url(${image.src})`;
             }
             loadable.classList.remove('is-loading');
-        })
+        });
+
         image.src = loadable.getAttribute('data-src');
     });
 }
