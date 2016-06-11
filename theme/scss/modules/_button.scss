@@ -1,7 +1,7 @@
 .button {
     background: $color-tertiary;
     border: none;
-    color: white;
+    color: $color-white;
     display: inline-block;
     font-size: 100%;
     padding: 20px 40px;
@@ -12,7 +12,7 @@
     &:focus,
     &:hover {
         background: $color-tertiary-dark;
-        color: currentColor;
+        color: $color-white;
     }
 
     &:active {

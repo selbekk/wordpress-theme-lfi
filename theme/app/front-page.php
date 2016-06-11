@@ -17,7 +17,7 @@
 </section>
 <section class="block-section">
     <div class="block-section-inner">
-        <div class="wrapper entrances">
+        <div class="entrances">
             <div class="entrance" data-src="https://unsplash.it/300/300/?random&1">
                 <a href="#" class="entrance-link">
                     <h3 class="entrance-text">Fysio&shy;terapi</h3>
@@ -53,12 +53,13 @@
 </section>
 <section class="block-section">
     <div class="block-section-inner">
-        <blockquote cite="Some person" class="testimonial">
+        <blockquote class="testimonial">
             Ryggproblemene forsvant etter kun noen få timers behandling. Kunne
             ikke vært mer fornøyd!
+            <cite>Eksempel Hansen</cite>
         </blockquote>
         <div class="button-group mod-centered">
-            <a href="#" class="button">Les referanser</a>
+            <a href="#" class="button">Les flere referanser</a>
         </div>
     </div>
 </section>

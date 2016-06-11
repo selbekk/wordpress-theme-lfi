@@ -12,5 +12,6 @@
 }
 
 .block-section-inner {
-    margin: 0 auto;
+    @extend .wrapper;
+    padding: 2em 0;
 }
