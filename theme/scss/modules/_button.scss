@@ -1,0 +1,34 @@
+.button {
+    background: $color-tertiary;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 130%;
+    padding: .5em 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .1s ease-out;
+
+    &:focus,
+    &:hover {
+        background: $color-tertiary-dark;
+    }
+
+    &:active {
+        transform: scale(1.02);
+    }
+}
+
+.button.mod-large {
+    @include laptop {
+        font-size: 150%;
+    }
+}
+
+.button-group {
+    margin: 1.5em 0;
+}
+
+.button-group.mod-centered {
+    text-align: center;
+}

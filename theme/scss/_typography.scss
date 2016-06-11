@@ -1,0 +1,9 @@
+.hero {
+    font-size: 200%;
+    font-weight: bolder;
+    margin: 0;
+
+    @include laptop {
+        font-size: 250%;
+    }
+}

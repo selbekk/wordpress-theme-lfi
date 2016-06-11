@@ -1,0 +1,30 @@
+.image-section {
+    position: relative;
+}
+
+.image-section-background {
+    background: center center no-repeat;
+    background-size: cover;
+    bottom: 0;
+    filter: brightness(0.7);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.image-section-content {
+    align-items: center;
+    color: white;
+    display: flex;
+    min-height: 66.67vh;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    @include laptop {
+        align-items: center;
+    }
+}
