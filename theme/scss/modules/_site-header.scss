@@ -4,14 +4,46 @@
     padding: 1em 0;
 }
 
+.site-header-inner {
+    @include clearfix();
+}
+
 .site-header-logo {
-    display: block;
+    display: inline-block;
     fill: currentColor;
+    float: left;
     margin: 0 auto;
     width: 50px;
 
     @include laptop {
         margin: 0;
         width: 100px;
+    }
+}
+
+.site-header-menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header-menu > .menu-item {
+    display: inline-block;
+}
+
+.site-header-menu > .menu-item > a {
+    display: block;
+    font-weight: 500;
+    padding: 1em 2em;
+    position: relative;
+
+    &:focus,
+    &:hover {
+
+    }
+
+    &:last-of-type {
+        right: -2em;
     }
 }

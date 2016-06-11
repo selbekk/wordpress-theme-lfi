@@ -19,7 +19,13 @@
                     <div class="site-footer-section">
                         <h3>Spesialiseringer</h3>
                         <nav class="site-footer-menu">
-                            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-menu',
+                                    'menu_class' => 'simple-list site-footer-menu',
+                                    'container' => ''
+                                )
+                            ); ?>
                         </nav>
                     </div>
                     <div class="site-footer-section">

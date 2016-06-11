@@ -33,6 +33,16 @@
     padding: 2em 0;
 }
 
+.site-footer-menu a {
+    color: $color-white;
+    font-weight: bold;
+
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .site-footer-link {
     color: $color-white;
     font-weight: bold;
