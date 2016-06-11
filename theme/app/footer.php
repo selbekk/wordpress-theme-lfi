@@ -1,13 +1,15 @@
         </main>
         <footer class="site-footer">
             <div class="wrapper">
-            <section class="site-footer-top">
+                <section class="site-footer-top">
                     <div class="site-footer-section">
                         <h3>Lillestrøm Fysikalske Institutt</h3>
                         <p>
                             LFI er et moderne tverrfaglig institutt lokalisert
-                            på Åråsen Stadion i Lillestrøm. Vi har
-                            spesialkompetanse på utredning og behandling
+                            på Åråsen Stadion i Lillestrøm.
+                        </p>
+                        <p>
+                            Vi har spesialkompetanse på utredning og behandling
                             av muskel- og skjelettplager og tilbyr profesjonell
                             treningsveiledning og oppfølging over tid. Erfarne
                             terapeuter hjelper deg å ta kontroll over plagene
@@ -15,7 +17,7 @@
                         </p>
                     </div>
                     <div class="site-footer-section">
-                        <h3>Vi tilbyr</h3>
+                        <h3>Spesialiseringer</h3>
                         <ul class="simple-list">
                             <li>
                                 <a href="#" class="site-footer-link">
