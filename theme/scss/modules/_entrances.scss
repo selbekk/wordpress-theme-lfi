@@ -1,27 +1,46 @@
 .entrances {
+    @include clearfix();
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 
+    @include laptop {
+        flex-direction: row;
+    }
 }
 
 .entrance {
+    background: center center no-repeat;
+    background-size: cover;
     color: white;
-    display: block;
-    padding: 1em;
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 2em;
+    padding: 0.5em;
+
+    @include laptop {
+        margin: 0.5em;
+    }
 }
 
 .entrance-link {
-    background-color: $color-grey-light;
-    color: $color-grey-dark;
-    display: block;
+    align-items: center;
+    color: $color-white;
+    display: flex;
+    height: 200px;
+    justify-content: center;
     padding: 1em;
     transition: background-color .1s ease-out;
+    width: 100%;
 
     &:focus,
     &:hover {
-        background-color: $color-grey-lighter;
+        color: currentColor;
     }
 }
 
 .entrance-text {
     margin: 0;
     text-align: center;
+    text-shadow: 0 0 0.5em black;
 }

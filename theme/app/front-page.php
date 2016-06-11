@@ -17,18 +17,18 @@
 </section>
 <section class="block-section">
     <div class="block-section-inner">
-        <div class="entrances">
-            <div class="entrance">
+        <div class="wrapper entrances">
+            <div class="entrance" data-src="https://unsplash.it/300/300/?random&1">
                 <a href="#" class="entrance-link">
                     <h3 class="entrance-text">Fysio&shy;terapi</h3>
                 </a>
             </div>
-            <div class="entrance">
+            <div class="entrance" data-src="https://unsplash.it/300/300/?random&2">
                 <a href="#" class="entrance-link">
                     <h3 class="entrance-text">Trenings&shy;senter</h3>
                 </a>
             </div>
-            <div class="entrance">
+            <div class="entrance" data-src="https://unsplash.it/300/300/?random&3">
                 <a href="#" class="entrance-link">
                     <h3 class="entrance-text">Personlig oppfølging</h3>
                 </a>
