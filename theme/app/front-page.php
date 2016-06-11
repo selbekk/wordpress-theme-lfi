@@ -1,4 +1,4 @@
-<?php include_once('header.php'); ?>
+<?php get_header(); ?>
 <section class="image-section">
     <div class="image-section-background" data-src="https://unsplash.it/1000/500/?random"></div>
     <div class="image-section-content">
@@ -94,4 +94,4 @@
 
     </div>
 </section>
-<?php include_once('footer.php'); ?>
+<?php get_footer(); ?>
