@@ -1,9 +1,14 @@
 .block-section {
-    background-color: white;
+    background-color: $color-white;
+
+    &:nth-of-type(odd) {
+        background-color: $color-grey-lighter;
+    }
 }
 
-.block-section:nth-of-type(odd) {
-    background-color: $color-white;
+.block-section.mod-colored {
+    background-color: $color-secondary;
+    color: $color-white;
 }
 
 .block-section-inner {
