@@ -62,9 +62,33 @@
                 <cite>Eksempel Hansen</cite>
             </blockquote>
             <div class="button-group mod-centered">
-                <a href="#" class="button">Les flere referanser</a>
+                <a href="#" class="button">Se hva folk sier om oss</a>
             </div>
         </div>
+    </div>
+</section>
+<section class="block-section">
+    <div class="embed-responsive embed-responsive-front-page js-map">
+        <script>
+            function initMap() {
+                var mapDiv = document.querySelector('.js-map');
+                var position = { lat: 59.9626819, lng: 11.0620008 };
+                var map = new google.maps.Map(mapDiv, {
+                    center: position,
+                    zoom: 17,
+                    scrollwheel: false,
+                    mapTypeControl: false,
+                    disableDefaultUI: true
+                });
+                var marker = new google.maps.Marker({
+                    position: position,
+                    map: map
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            async defer></script>
+
     </div>
 </section>
 <?php include_once('footer.php'); ?>
