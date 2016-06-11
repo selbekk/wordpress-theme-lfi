@@ -78,7 +78,7 @@
                             <li>Fredag 07 - 16</li>
                         </ul>
                         <div class="button-group">
-                            <a href="#" class="button mod-full-width">
+                            <a href="https://timebestilling.physica.no/clinic?clinic=p1992" class="button mod-full-width">
                                 Bestill time
                             </a>
                             <a href="#" class="button mod-full-width">

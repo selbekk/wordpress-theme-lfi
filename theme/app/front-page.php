@@ -10,7 +10,10 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div class="button-group mod-centered">
-                <a href="#" class="button mod-large">Bestill time</a>
+                <a href="https://timebestilling.physica.no/clinic?clinic=p1992"
+                    class="button mod-large">
+                    Bestill time
+                </a>
             </div>
         </div>
     </div>
