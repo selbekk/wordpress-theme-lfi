@@ -42,5 +42,5 @@
 .entrance-text {
     margin: 0;
     text-align: center;
-    text-shadow: 0 0 0.5em black;
+    text-shadow: 0 0 10px transparentize($color-black, 0.5);
 }
