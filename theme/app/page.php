@@ -11,7 +11,7 @@
                 <h1 class="page-title wrapper"><?php the_title(); ?></h1>
             <?php endif; ?>
             <div class="wrapper">
-                <div class="page-content">
+                <div class="page-content cms-content">
                     <?php the_content(); ?>
                 </div>
             </div>
