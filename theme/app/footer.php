@@ -38,7 +38,7 @@
                             <a href="https://timebestilling.physica.no/clinic?clinic=p1992" class="button mod-full-width">
                                 Bestill time
                             </a>
-                            <a href="#" class="button mod-full-width">
+                            <a href="/kontakt" class="button mod-full-width">
                                 Kontakt oss
                             </a>
                             <a href="tel:64843400" class="button visible-phone">
@@ -57,7 +57,7 @@
                 <div class="wrapper">
                     <?php echo date("Y"); ?> &copy;
                     Lillestrøm Fysikalske Institutt.
-                    <a href="#" class="site-footer-link">
+                    <a href="/cookies" class="site-footer-link">
                         Informasjon om bruk av cookies
                     </a>
                 </div>
