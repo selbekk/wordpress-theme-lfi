@@ -12,6 +12,9 @@
             <?php endif; ?>
             <div class="wrapper">
                 <div class="page-content cms-content">
+                    <?php if (has_excerpt()): ?>
+                        <p class="lead"><?php echo get_the_excerpt() ?></p>
+                    <?php endif; ?>
                     <?php the_content(); ?>
                 </div>
             </div>

@@ -3,6 +3,13 @@
 // Features
 add_theme_support( 'post-thumbnails' );
 
+// Add excerpts to apges
+function add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'add_excerpts_to_pages' );
+
+
 // Register menus
 function register_menus() {
     register_nav_menus(
