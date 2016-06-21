@@ -1,14 +1,67 @@
-<?php
+m<?php
 
-// Features
-add_theme_support( 'post-thumbnails' );
-
-// Add excerpts to apges
+// Add excerpts to pages
 function add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'add_excerpts_to_pages' );
 
+// Add testimonial post type
+function register_testimonial_post_type() {
+    register_post_type( 'testimonial',
+        array(
+            'labels' => array(
+                'name' => 'Testimonials',
+                'singular_name' => 'Testimonial',
+                'add_new' => 'Add new',
+                'add_new_item' => 'Add new testimonial',
+                'edit_item' => 'Edit testimonial',
+                'view_item' => 'View testimonial',
+                'search_items' => 'Search testimonials',
+                'not_found' => 'Testimonial not found',
+                'not_found_in_trash' => 'Testimonial not found in trash',
+                'all_items' => 'All testimonials',
+                'archives' => 'Testimonials archive'
+            ),
+            'description' => 'A customer testimonial describing how their experience was',
+            'public' => true,
+            'menu_position' => 20,
+            'menu_icon' => 'dashicons-thumbs-up',
+            'supports' => array( 'title', 'editor', 'excerpt' )
+        )
+    );
+}
+add_action('init', 'register_testimonial_post_type');
+
+// Add employee post type
+function register_employee_post_type() {
+    register_post_type( 'employee',
+        array(
+            'labels' => array(
+                'name' => 'Employees',
+                'singular_name' => 'Employee',
+                'add_new' => 'Add new',
+                'add_new_item' => 'Add new employee',
+                'edit_item' => 'Edit employee details',
+                'view_item' => 'View employee',
+                'search_items' => 'Search employees',
+                'not_found' => 'Employee not found',
+                'not_found_in_trash' => 'Employee not found in trash',
+                'all_items' => 'All employees',
+                'archives' => 'Employees archive'
+            ),
+            'description' => 'An LFI employee',
+            'public' => true,
+            'menu_position' => 20,
+            'menu_icon' => 'dashicons-groups',
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+        )
+    );
+}
+add_action('init', 'register_employee_post_type');
+
+// Add thumbnail supports
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'employee' ) );
 
 // Register menus
 function register_menus() {
