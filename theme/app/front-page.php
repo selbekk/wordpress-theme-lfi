@@ -65,7 +65,7 @@
                 <cite>Eksempel Hansen</cite>
             </blockquote>
             <div class="button-group mod-centered">
-                <a href="#" class="button">Se hva folk sier om oss</a>
+                <a href="/sitater" class="button">Se hva folk sier om oss</a>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-m<?php
+<?php
 
 // Add excerpts to pages
 function add_excerpts_to_pages() {
@@ -27,7 +27,7 @@ function register_testimonial_post_type() {
             'public' => true,
             'menu_position' => 20,
             'menu_icon' => 'dashicons-thumbs-up',
-            'supports' => array( 'title', 'editor', 'excerpt' )
+            'supports' => array( 'title', 'editor' ),
         )
     );
 }
@@ -54,7 +54,7 @@ function register_employee_post_type() {
             'public' => true,
             'menu_position' => 20,
             'menu_icon' => 'dashicons-groups',
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
         )
     );
 }
