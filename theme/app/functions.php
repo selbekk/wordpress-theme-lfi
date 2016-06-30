@@ -68,6 +68,7 @@ function register_menus() {
     register_nav_menus(
         array(
             'header-menu' => 'Header menu',
+            'front-page-entrances-menu' => 'Front page entrances menu',
             'footer-menu' => 'Footer services menu'
         )
     );
@@ -80,4 +81,53 @@ function include_theme_resources() {
     wp_enqueue_script('bundle.js', get_template_directory_uri() .'/resources/bundle.js');
 }
 add_action('wp_enqueue_scripts', 'include_theme_resources');
+
+// Theme customization
+function setup_theme_customizations($customizer) {
+    // Front page section
+    $customizer->add_section('front_page', array(
+        'title' => 'Front page',
+        'description' => 'Choices to customize the front page',
+        'capability' => 'edit_theme_options'
+    ));
+
+    // Front page image
+    $customizer->add_setting('front_page_image', array(
+        'type' => 'theme_mod',
+        'transport' => 'postMessage'
+    ));
+
+    $customizer->add_control(
+        new WP_Customize_Media_Control( $customizer, 'front_page_image', array(
+          'label' => 'Featured Home Page Image',
+          'section' => 'front_page',
+          'mime_type' => 'image',
+        ))
+    );
+
+    $customizer->add_setting('front_page_heading', array(
+        'type' => 'theme_mod',
+        'transport' => 'postMessage'
+    ));
+
+    $customizer->add_control('front_page_heading', array(
+        'label' => 'Front page main heading',
+        'section' => 'front_page',
+        'type' => 'text'
+    ));
+
+    $customizer->add_setting('front_page_lead', array(
+        'type' => 'theme_mod',
+        'transport' => 'postMessage'
+    ));
+
+    $customizer->add_control('front_page_lead', array(
+        'label' => 'Front page lead introduction',
+        'section' => 'front_page',
+        'type' => 'textarea'
+    ));
+}
+add_action('customize_register', 'setup_theme_customizations');
+
+
 ?>
