@@ -126,6 +126,28 @@ function setup_theme_customizations($customizer) {
         'section' => 'front_page',
         'type' => 'textarea'
     ));
+
+    $customizer->add_setting('front_page_freetext_title', array(
+        'type' => 'theme_mod',
+        'transport' => 'postMessage'
+    ));
+
+    $customizer->add_control('front_page_freetext_title', array(
+        'label' => 'Front page freetext title',
+        'section' => 'front_page',
+        'type' => 'text'
+    ));
+
+    $customizer->add_setting('front_page_freetext_text', array(
+        'type' => 'theme_mod',
+        'transport' => 'postMessage'
+    ));
+
+    $customizer->add_control('front_page_freetext_text', array(
+        'label' => 'Front page freetext body',
+        'section' => 'front_page',
+        'type' => 'textarea'
+    ));
 }
 add_action('customize_register', 'setup_theme_customizations');
 
