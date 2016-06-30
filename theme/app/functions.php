@@ -94,59 +94,162 @@ function setup_theme_customizations($customizer) {
     // Front page image
     $customizer->add_setting('front_page_image', array(
         'type' => 'theme_mod',
-        'transport' => 'postMessage'
     ));
 
     $customizer->add_control(
         new WP_Customize_Media_Control( $customizer, 'front_page_image', array(
-          'label' => 'Featured Home Page Image',
+          'label' => 'Featured image',
           'section' => 'front_page',
           'mime_type' => 'image',
         ))
     );
 
+    // Front page heading
     $customizer->add_setting('front_page_heading', array(
         'type' => 'theme_mod',
-        'transport' => 'postMessage'
     ));
 
     $customizer->add_control('front_page_heading', array(
-        'label' => 'Front page main heading',
+        'label' => 'Top heading',
         'section' => 'front_page',
         'type' => 'text'
     ));
 
+    // Front page lead
     $customizer->add_setting('front_page_lead', array(
         'type' => 'theme_mod',
-        'transport' => 'postMessage'
     ));
 
     $customizer->add_control('front_page_lead', array(
-        'label' => 'Front page lead introduction',
+        'label' => 'Top lead introduction',
         'section' => 'front_page',
         'type' => 'textarea'
     ));
 
+    // Front page free text section title
     $customizer->add_setting('front_page_freetext_title', array(
         'type' => 'theme_mod',
-        'transport' => 'postMessage'
     ));
 
     $customizer->add_control('front_page_freetext_title', array(
-        'label' => 'Front page freetext title',
+        'label' => 'Freetext title',
         'section' => 'front_page',
         'type' => 'text'
     ));
 
+    // Front page free text section text
     $customizer->add_setting('front_page_freetext_text', array(
         'type' => 'theme_mod',
-        'transport' => 'postMessage'
     ));
 
     $customizer->add_control('front_page_freetext_text', array(
-        'label' => 'Front page freetext body',
+        'label' => 'Freetext body',
         'section' => 'front_page',
         'type' => 'textarea'
+    ));
+
+    // Front page free text section CTA button label
+    $customizer->add_setting('front_page_freetext_cta_text', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('front_page_freetext_cta_text', array(
+        'label' => 'Freetext CTA button text',
+        'section' => 'front_page',
+        'type' => 'text'
+    ));
+
+    // Front page free text section CTA button link
+    $customizer->add_setting('front_page_freetext_cta_target', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('front_page_freetext_cta_target', array(
+        'label' => 'Freetext CTA button link',
+        'section' => 'front_page',
+        'type' => 'dropdown-pages'
+    ));
+
+    // General section
+
+    $customizer->add_section('general', array(
+        'title' => 'General',
+        'description' => 'General settings',
+        'capability' => 'edit_theme_options'
+    ));
+
+    // General company name
+    $customizer->add_setting('general_company_name', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('general_company_name', array(
+        'label' => 'Company name',
+        'section' => 'general',
+        'type' => 'text'
+    ));
+
+    // General about text
+    $customizer->add_setting('general_company_about', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('general_company_about', array(
+        'label' => 'About the company',
+        'section' => 'footer',
+        'type' => 'textarea'
+    ));
+
+    // General opening hours
+    $customizer->add_setting('general_company_opening_hours', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('general_company_opening_hours', array(
+        'label' => 'Opening hours',
+        'section' => 'general',
+        'type' => 'textarea'
+    ));
+
+    // General booking URL
+    $customizer->add_setting('general_booking_url', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('general_booking_url', array(
+        'label' => 'Booking URL',
+        'section' => 'general',
+        'type' => 'url'
+    ));
+
+    // Contact section
+
+    $customizer->add_section('contact', array(
+        'title' => 'Contact details',
+        'description' => 'Contact details settings',
+        'capability' => 'edit_theme_options'
+    ));
+
+    // Contact phone number
+    $customizer->add_setting('contact_phone_number', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('contact_phone_number', array(
+        'label' => 'Phone number',
+        'section' => 'contact',
+        'type' => 'tel'
+    ));
+
+    // Contact phone number
+    $customizer->add_setting('contact_email', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('contact_email', array(
+        'label' => 'E-mail',
+        'section' => 'contact',
+        'type' => 'email'
     ));
 }
 add_action('customize_register', 'setup_theme_customizations');

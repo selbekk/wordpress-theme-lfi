@@ -31,18 +31,22 @@
                     <div class="site-footer-section">
                         <h3>Åpningstider</h3>
                         <ul class="simple-list">
-                            <li>Mandag - torsdag 07 - 21</li>
-                            <li>Fredag 07 - 16</li>
+                            <?php
+                            $opening_hours = preg_split('/\R/', get_theme_mod( 'general_company_opening_hours' ));
+                            foreach($opening_hours as $opening_hour) {
+                                echo "<li>$opening_hour</li>";
+                            }
+                            ?>
                         </ul>
                         <div class="button-group">
-                            <a href="https://timebestilling.physica.no/clinic?clinic=p1992" class="button mod-full-width">
+                            <a href="<?php echo get_theme_mod( 'general_booking_url', '/' ); ?>" class="button mod-full-width">
                                 Bestill time
                             </a>
                             <a href="/kontakt" class="button mod-full-width">
                                 Kontakt oss
                             </a>
-                            <a href="tel:64843400" class="button visible-phone">
-                                Ring oss på 648 43 400
+                            <a href="tel:<?php echo str_replace(' ', '', get_theme_mod( 'contact_phone_number' )); ?>" class="button visible-phone">
+                                Ring oss på <?php echo get_theme_mod( 'contact_phone_number' ); ?>
                             </a>
                             <a href="#top"
                                 class="button visible-phone"
@@ -56,7 +60,7 @@
             <section class="site-footer-bottom">
                 <div class="wrapper">
                     <?php echo date("Y"); ?> &copy;
-                    Lillestrøm Fysikalske Institutt.
+                    <?php echo get_theme_mod( 'general_company_name', 'Add your company name here' ); ?>
                     <a href="/cookies" class="site-footer-link">
                         Informasjon om bruk av cookies
                     </a>

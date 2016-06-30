@@ -10,7 +10,7 @@
                 <?php echo get_theme_mod( 'front_page_lead', 'Add your lead here' ); ?>
             </p>
             <div class="button-group mod-centered">
-                <a href="https://timebestilling.physica.no/clinic?clinic=p1992"
+                <a href="<?php echo get_theme_mod( 'company_booking_url', '/' ); ?>"
                     class="button mod-large">
                     Bestill time
                 </a>
@@ -43,17 +43,15 @@
 <section class="block-section mod-colored">
     <div class="block-section-inner">
         <div class="wrapper">
-            <h2>Finn riktig behandling</h2>
+            <h2><?php echo get_theme_mod( 'front_page_freetext_title', 'Add your title here' ); ?></h2>
             <p class="lead">
-                Hvis du opplever plager eller lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                <?php echo get_theme_mod( 'front_page_freetext_text', 'Add your text here' ); ?>
             </p>
+            <div class="button-group">
+                <a href="<?php echo get_permalink(get_theme_mod( 'front_page_freetext_cta_target' )); ?>" class="button">
+                    <?php echo get_theme_mod( 'front_page_freetext_cta_text', 'Add button text' ); ?>
+                </a>
+            </div>
         </div>
     </div>
 </section>
