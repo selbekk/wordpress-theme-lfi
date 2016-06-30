@@ -10,7 +10,7 @@
                 <?php echo get_theme_mod( 'front_page_lead', 'Add your lead here' ); ?>
             </p>
             <div class="button-group mod-centered">
-                <a href="<?php echo get_theme_mod( 'company_booking_url', '/' ); ?>"
+                <a href="<?php echo get_theme_mod( 'general_booking_url', '/' ); ?>"
                     class="button mod-large">
                     Bestill time
                 </a>
