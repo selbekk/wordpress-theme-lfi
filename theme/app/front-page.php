@@ -59,14 +59,20 @@
 <section class="block-section">
     <div class="block-section-inner">
         <div class="wrapper">
+            <?php
+            rewind_posts();
+            $args = array('post_type' => 'testimonial', 'orderby' => 'rand', 'posts_per_page' => 1);
+            $loop = new WP_Query( $args );
+            while($loop->have_posts()): $loop->the_post();
+            ?>
             <blockquote class="testimonial">
-                Ryggproblemene forsvant etter kun noen få timers behandling. Kunne
-                ikke vært mer fornøyd!
-                <cite>Eksempel Hansen</cite>
+                <?php echo wp_strip_all_tags(get_the_content()); ?>
+                <cite><?php the_title(); ?></cite>
             </blockquote>
             <div class="button-group mod-centered">
                 <a href="/sitater" class="button">Se hva folk sier om oss</a>
             </div>
+            <?php endwhile ?>
         </div>
     </div>
 </section>
