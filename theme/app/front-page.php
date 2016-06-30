@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="entrance" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( 11 ), 'medium')[0]; ?>">
-                <a href="<?php echo get_page_link(8); ?>" class="entrance-link">
+                <a href="<?php echo get_page_link(11); ?>" class="entrance-link">
                     <h3 class="entrance-text">Trenings&shy;senter</h3>
                 </a>
             </div>
