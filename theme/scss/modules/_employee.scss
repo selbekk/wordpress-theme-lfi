@@ -1,0 +1,56 @@
+.employees {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.employee {
+    flex-grow: 1;
+    position: relative;
+    min-width: 100%;
+    overflow: hidden;
+    padding-bottom: 50%;
+
+    &:last-of-type {
+        border: none;
+    }
+
+    @include tablet {
+        min-width: 25%;
+        padding-bottom: calc(25% * 4 / 3);
+    }
+}
+
+.employee-image {
+    background: no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.employee-details {
+    bottom: 0;
+    color: $color-white;
+    position: absolute;
+    transform: translateY(50px);
+    transition: transform .2s ease-out;
+    width: 100%;
+    z-index: 2;
+}
+
+.employee-name {
+    text-align: center;
+    text-shadow: 0 0 5px $color-black;
+}
+
+.employee-title {
+    text-align: center;
+}
+
+.employee:focus .employee-details,
+.employee:hover .employee-details {
+    transform: none;
+}
