@@ -26,7 +26,7 @@
 ?>
     <article class="employee">
         <a class="employee-link" href="<?php the_permalink(); ?>">
-            <div class="employee-image" data-src="<?php the_post_thumbnail_url('medium'); ?>"></div>
+            <div class="employee-image" data-src="<?php the_post_thumbnail_url('large'); ?>"></div>
             <div class="employee-details">
                 <h2 class="employee-name"><?php the_title(); ?></h2>
                 <p class="employee-title"><?php echo get_the_excerpt(); ?></p>
@@ -41,7 +41,9 @@
         <p class="lead">
             Å finne riktig behandler trenger nemlig ikke være vanskelig.
         </p>
-        <a href="/kontakt" class="button mod-inverted">Send oss en mail!</a>
+        <div class="button-group">
+            <a href="/kontakt" class="button mod-inverted">Send oss en mail!</a>
+        </div>
     </div>
 </section>
 
