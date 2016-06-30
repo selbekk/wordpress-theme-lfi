@@ -1,0 +1,12 @@
+.call-to-action {
+    background: linear-gradient(to bottom, $color-grey-lighter, $color-grey-light);
+    display: flex;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.call-to-action-heading {
+    font-size: 200%;
+    font-weight: 700;
+    margin-top: 0;
+}

@@ -36,7 +36,13 @@
 <?php endwhile; ?>
 </section>
 <section class="call-to-action">
-    <h2>
+    <div class="wrapper">
+        <h2 class="call-to-action-heading">Har du spørsmål?</h2>
+        <p class="lead">
+            Å finne riktig behandler trenger nemlig ikke være vanskelig.
+        </p>
+        <a href="/kontakt" class="button mod-inverted">Send oss en mail!</a>
+    </div>
 </section>
 
 <?php get_footer(); ?>

@@ -50,7 +50,7 @@
     text-align: center;
 }
 
-.employee:focus .employee-details,
-.employee:hover .employee-details {
+.employee-link:focus .employee-details,
+.employee-link:hover .employee-details {
     transform: none;
 }
