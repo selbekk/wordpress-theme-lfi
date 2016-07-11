@@ -1,0 +1,13 @@
+.blog-article-header-link {
+    color: currentColor;
+    display: block;
+}
+
+.blog-article-heading {
+    font-size: 200%;
+    width: 100%;
+
+    .blog-featured-image & {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    }
+}
