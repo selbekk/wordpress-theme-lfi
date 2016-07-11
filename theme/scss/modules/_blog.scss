@@ -1,3 +1,13 @@
+.blog-article {
+    border-bottom: 2px solid $color-grey-darker;
+    padding-bottom: 2em;
+
+    &:last-of-type {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
 .blog-article-header-link {
     color: currentColor;
     display: block;
