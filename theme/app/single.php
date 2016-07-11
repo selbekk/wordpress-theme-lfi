@@ -17,6 +17,9 @@
             <?php if(has_excerpt()) : ?>
                 <p class="lead center"><?php echo get_the_excerpt(); ?></p>
             <?php endif; ?>
+            <div class="blog-article-meta center">
+                Skrevet <?php echo date_i18n('j. F, Y', get_post_time()); ?> av <?php the_author(); ?>;
+            </div>
             <?php the_content(); ?>
         </div>
     </article>

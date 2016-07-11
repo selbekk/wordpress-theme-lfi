@@ -4,10 +4,14 @@
 }
 
 .blog-article-heading {
-    font-size: 200%;
+    font-size: 250%;
     width: 100%;
 
     .blog-featured-image & {
         text-shadow: 0 0 5px rgba(0, 0, 0, 1);
     }
+}
+
+.blog-article-meta {
+    margin: 1em 0;
 }
