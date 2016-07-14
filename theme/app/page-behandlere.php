@@ -24,12 +24,12 @@
     $loop = new WP_Query( $args );
     while($loop->have_posts()): $loop->the_post();
 ?>
-    <article class="employee">
-        <a class="employee-link" href="<?php the_permalink(); ?>">
-            <div class="employee-image" data-src="<?php the_post_thumbnail_url('large'); ?>"></div>
-            <div class="employee-details">
-                <h2 class="employee-name"><?php the_title(); ?></h2>
-                <p class="employee-title"><?php echo get_the_excerpt(); ?></p>
+    <article class="employees-item">
+        <a class="employees-item--link" href="<?php the_permalink(); ?>">
+            <div class="employees-item-image" data-src="<?php the_post_thumbnail_url('large'); ?>"></div>
+            <div class="employees-item-details">
+                <h2 class="employees-item-name"><?php the_title(); ?></h2>
+                <p class="employees-item-title"><?php echo get_the_excerpt(); ?></p>
             </div>
         </a>
     </article>

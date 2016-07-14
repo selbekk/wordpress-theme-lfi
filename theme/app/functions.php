@@ -28,6 +28,10 @@ function register_testimonial_post_type() {
             'menu_position' => 20,
             'menu_icon' => 'dashicons-thumbs-up',
             'supports' => array( 'title', 'editor' ),
+            'rewrite' => array(
+                'slug' => 'sitater',
+                'with_front' => false,
+            )
         )
     );
 }
@@ -54,7 +58,11 @@ function register_employee_post_type() {
             'public' => true,
             'menu_position' => 20,
             'menu_icon' => 'dashicons-groups',
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
+            'rewrite' => array(
+                'slug' => 'behandlere',
+                'with_front' => false,
+            )
         )
     );
 }
@@ -209,6 +217,17 @@ function setup_theme_customizations($customizer) {
         'label' => 'Opening hours',
         'section' => 'general',
         'type' => 'textarea'
+    ));
+
+    // General booking base URL
+    $customizer->add_setting('general_booking_base_url', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('general_booking_base_url', array(
+        'label' => 'Booking base URL',
+        'section' => 'general',
+        'type' => 'url'
     ));
 
     // General booking URL
