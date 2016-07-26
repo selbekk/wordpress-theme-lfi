@@ -94,7 +94,7 @@
                 });
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyCC1Fu-z6wUYNwFLyOVfkO8tOfSMLbYNaY"
             async defer></script>
 
     </div>

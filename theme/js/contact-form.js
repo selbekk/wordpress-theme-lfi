@@ -20,8 +20,8 @@ export class ContactForm {
             method: this.$form.method,
             body: new FormData(this.$form),
         })
-        .then(this.showFeedback)
         .then(response => {
+            this.showFeedback();
             if (response.status === 200) {
                 this.mailSent();
             } else {
