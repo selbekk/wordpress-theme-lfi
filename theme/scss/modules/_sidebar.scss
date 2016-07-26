@@ -1,0 +1,8 @@
+.sidebar {
+    width: 100%;
+
+    @include laptop {
+        float: right;
+        width: 33%;
+    }
+}

@@ -1,0 +1,51 @@
+.form-fields {
+    transition: .5s ease-out;
+    max-height: 1000px;
+}
+
+.form-fields.is-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow-y: hidden;
+    visibility: hidden;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-field {
+    border: 1px solid $color-grey-dark;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    width: 100%;
+
+    @include laptop {
+        width: 40%;
+    }
+}
+
+.form-field.mod-textarea {
+    height: 10em;
+    resize: vertical;
+    width: 100%;
+
+    @include laptop {
+        width: 60%;
+    }
+}
+
+.form-feedback {
+    opacity: 0;
+    transition: .5s ease-out .5s;
+    visibility: hidden;
+}
+
+.form-feedback.is-visible {
+    opacity: 1;
+    visibility: visible;
+}

@@ -260,7 +260,7 @@ function setup_theme_customizations($customizer) {
         'type' => 'tel'
     ));
 
-    // Contact phone number
+    // Contact email
     $customizer->add_setting('contact_email', array(
         'type' => 'theme_mod',
     ));
@@ -269,6 +269,17 @@ function setup_theme_customizations($customizer) {
         'label' => 'E-mail',
         'section' => 'contact',
         'type' => 'email'
+    ));
+
+    // Contact phone number
+    $customizer->add_setting('contact_address', array(
+        'type' => 'theme_mod',
+    ));
+
+    $customizer->add_control('contact_address', array(
+        'label' => 'Address',
+        'section' => 'contact',
+        'type' => 'textarea'
     ));
 }
 add_action('customize_register', 'setup_theme_customizations');
