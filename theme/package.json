@@ -6,7 +6,9 @@
     "build": "webpack",
     "dist": "webpack -p",
     "watch": "npm run build -- --watch",
-    "lint": "eslint js/"
+    "lint": "eslint js/",
+    "predeploy": "npm run dist",
+    "deploy": "scp -r lfi.no@ssh.lfi.no:/www/wp-content/themes/lfi ../site/wp-content/themes/lfi"
   },
   "author": "Kristofer Selbekk <kristofer@selbekk.io>",
   "license": "ISC",
