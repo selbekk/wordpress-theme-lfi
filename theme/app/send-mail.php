@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 // Save input as variables
 $name = $_POST['name'];
 $email = $_POST['email'];
-$msg = $_POST['msg'];
+$msg = $_POST['message'];
 
 // Super awesome ninja trick.
 $msg = nl2br($msg);
@@ -19,7 +19,8 @@ $msg = nl2br($msg);
 $to = 'selbeezy@gmail.com';
 $subject = "Melding fra $name via LFI.no";
 $headers = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-Type: text/html; charset=utf-8' . "\r\n";
+$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+$headers .= 'From: '. $name .' <'. $email .'>' . "\r\n";
 
 // Create the HTML mail
 $body = '<!DOCTYPE html><html>'.
