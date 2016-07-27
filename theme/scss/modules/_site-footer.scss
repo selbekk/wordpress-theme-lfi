@@ -4,20 +4,17 @@
 }
 
 .site-footer-top {
-    display: flex;
-    flex-direction: column;
     padding: 2em 0;
 
     @include laptop {
-        flex-direction: row;
+        @include clearfix();
     }
 }
 
 .site-footer-section {
-    flex-basis: 0;
-    flex-grow: 1;
-
     @include laptop {
+        float: left;
+        width: calc(100% / 3);
         padding: 0 1em;
 
         &:first-of-type {

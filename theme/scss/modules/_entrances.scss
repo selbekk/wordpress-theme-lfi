@@ -1,27 +1,20 @@
 .entrances {
     @include clearfix();
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     padding: 0;
-
-    @include laptop {
-        flex-direction: row;
-    }
 }
 
 .entrance {
     background: center center no-repeat;
     background-size: cover;
     color: white;
-    flex-basis: 0;
-    flex-grow: 1;
+    float: left;
     font-size: 2em;
-    min-width: 30%;
+    width: 100%;
     padding: 0.5em;
 
     @include laptop {
         margin: 0.5em;
+        width: calc(33% - 1em);
     }
 }
 

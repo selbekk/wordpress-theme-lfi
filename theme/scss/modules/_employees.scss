@@ -1,13 +1,10 @@
 .employees {
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
+    @include clearfix();
 }
 
 .employees-item {
-    flex-grow: 1;
     position: relative;
-    min-width: 100%;
+    width: 100%;
     overflow: hidden;
     padding-bottom: 50%;
 
@@ -16,7 +13,8 @@
     }
 
     @include tablet {
-        min-width: 25%;
+        float: left;
+        width: 25%;
         padding-bottom: calc(25% * 4 / 3);
     }
 }

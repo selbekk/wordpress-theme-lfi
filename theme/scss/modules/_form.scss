@@ -43,6 +43,10 @@
     opacity: 0;
     transition: .5s ease-out .5s;
     visibility: hidden;
+
+    @include laptop {
+        width: 60%;
+    }
 }
 
 .form-feedback.is-visible {
