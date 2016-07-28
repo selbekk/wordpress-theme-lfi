@@ -16,7 +16,7 @@ $msg = $_POST['message'];
 $msg = nl2br($msg);
 
 // Set up mail metadata
-$to = 'selbeezy@gmail.com';
+$to = 'post@lfi.no';
 $subject = "Melding fra $name via LFI.no";
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
