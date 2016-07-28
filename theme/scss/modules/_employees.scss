@@ -32,10 +32,8 @@
     bottom: 0;
     color: $color-white;
     position: absolute;
-    transform: translateY(50px);
-    transition: transform .2s ease-out;
-    width: 100%;
     z-index: 2;
+    width: 100%;
 }
 
 .employees-item-name {
@@ -43,11 +41,7 @@
     text-shadow: 0 0 5px $color-black;
 }
 
-.employees-item-title {
-    text-align: center;
-}
-
-.employees-item-link:focus .employees-item-details,
-.employees-item-link:hover .employees-item-details {
-    transform: none;
+.employees-item-link:focus .employees-item-image,
+.employees-item-link:hover .employees-item-image {
+    transform: scale(1.04);
 }
