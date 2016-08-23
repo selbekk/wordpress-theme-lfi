@@ -24,8 +24,8 @@ if ($type == 'contact') {
 $msg = nl2br($_POST['message']);
 
 // Set up mail metadata
-//$to = 'post@lfi.no';
-$to = 'selbeezy@gmail.com'; // TODO: REMOVE, DEMO!
+$to = 'post@lfi.no';
+//$to = 'selbeezy@gmail.com';
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 $headers .= 'From: '. $_POST['name'] .' <'. $_POST['email'] .'>' . "\r\n";
