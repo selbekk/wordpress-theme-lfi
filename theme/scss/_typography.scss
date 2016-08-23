@@ -19,6 +19,18 @@ a:hover {
     }
 }
 
+h1, .h1 {
+    font-size: 200%;
+}
+
+h2, .h2 {
+    font-size: 150%;
+}
+
+h3, .h3 {
+    font-size: 125%;
+}
+
 .lead {
     font-size: 125%;
     font-weight: 300;
@@ -26,6 +38,11 @@ a:hover {
 
 .center {
     text-align: center;
+}
+
+.small-text {
+    font-size: 80%;
+    color: $color-grey;
 }
 
 p {

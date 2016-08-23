@@ -22,4 +22,6 @@
 
 <?php endwhile; ?>
 
+<?php include 'part-call-to-action.php'; ?>
+
 <?php get_footer(); ?>

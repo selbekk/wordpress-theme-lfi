@@ -34,16 +34,8 @@
     </article>
 <?php endwhile; ?>
 </section>
-<section class="call-to-action">
-    <div class="wrapper">
-        <h2 class="call-to-action-heading">Har du spørsmål?</h2>
-        <p class="lead">
-            Å finne riktig behandler trenger nemlig ikke være vanskelig.
-        </p>
-        <div class="button-group">
-            <a href="/kontakt" class="button mod-inverted">Send oss en mail!</a>
-        </div>
-    </div>
-</section>
+<?php $loop->rewind_posts(); if (have_posts()) the_post(); ?>
+
+<?php include 'part-call-to-action.php'; ?>
 
 <?php get_footer(); ?>

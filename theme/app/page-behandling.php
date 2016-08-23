@@ -45,22 +45,6 @@
 
 <?php endwhile; ?>
 
-<section class="call-to-action">
-    <div class="wrapper">
-        <h2 class="call-to-action-heading">
-            Er du ikke sikker på hva du trenger?
-        </h2>
-        <p class="lead">
-            Å ha vondt et sted trenger ikke å bety at man vet hva slags
-            behandling man trenger. Rådgivning om hva slags spesialist man
-            trenger å besøke er alltid gratis!
-        </p>
-        <div class="button-group">
-            <a href="/kontakt" class="button mod-inverted">
-                Finn ut hva du trenger!
-            </a>
-        </div>
-    </div>
-</section>
+<?php include 'part-call-to-action.php'; ?>
 
 <?php get_footer(); ?>

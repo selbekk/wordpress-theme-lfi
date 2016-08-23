@@ -3,6 +3,10 @@
     max-height: 1000px;
 }
 
+.form-fields.mod-text-left {
+    text-align: left;
+}
+
 .form-fields.is-hidden {
     max-height: 0;
     opacity: 0;
@@ -36,6 +40,12 @@
 
     @include laptop {
         width: 60%;
+    }
+}
+
+.form-field.mod-wide {
+    @include laptop {
+        width: 100%;
     }
 }
 

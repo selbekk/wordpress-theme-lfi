@@ -51,21 +51,6 @@
     <?php wp_reset_postdata(); ?>
 </section>
 
-<section class="call-to-action">
-    <div class="wrapper">
-        <h2 class="call-to-action-heading">
-            Hva burde vi skrive om?
-        </h2>
-        <p class="lead">
-            Vi vil gjerne høre hva du vil vi skal skrive om på bloggen vår. Gi
-            oss beskjed, så lover vi å vurdere idéen!
-        </p>
-        <div class="button-group">
-            <a href="/kontakt" class="button mod-inverted">
-                Tips oss!
-            </a>
-        </div>
-    </div>
-</section>
+<?php include 'part-call-to-action.php'; ?>
 
 <?php get_footer(); ?>
