@@ -57,7 +57,7 @@ export class SignupForm {
     }
 }
 
-export default function initContactForm($el) {
+export default function iniSignupForm($el) {
     if ($el) {
         return new SignupForm($el);
     }

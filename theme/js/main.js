@@ -16,12 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menuTrigger();
 
     const $contactForm = document.querySelector('.js-contact-form');
-    if ($contactForm) {
-        contactForm($contactForm);
-    }
+    contactForm($contactForm);
 
     const $signupForm = document.querySelector('.js-signup-form');
-    if ($signupForm) {
-        signupForm($signupForm);
-    }
+    signupForm($signupForm);
 });

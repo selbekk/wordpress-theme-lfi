@@ -284,5 +284,218 @@ function setup_theme_customizations($customizer) {
 }
 add_action('customize_register', 'setup_theme_customizations');
 
+// Add advanced custom fields
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_prisinformasjon',
+		'title' => 'Prisinformasjon',
+		'fields' => array (
+			array (
+				'key' => 'field_57bb6e692da33',
+				'label' => 'Pris: Tittel',
+				'name' => 'price-title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57bb6ed62da34',
+				'label' => 'Pris: Innledning',
+				'name' => 'price-lead',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'html',
+			),
+			array (
+				'key' => 'field_57bb6f2f2da35',
+				'label' => 'Pris: Innhold',
+				'name' => 'price-content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '11',
+					'order_no' => 1,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_treningsveiledning',
+		'title' => 'Treningsveiledning',
+		'fields' => array (
+			array (
+				'key' => 'field_57bc956e117f2',
+				'label' => 'Treningsveiledning: Tittel',
+				'name' => 'personal-trainer-title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57bc9585117f3',
+				'label' => 'Treningsveiledning: Introduksjon',
+				'name' => 'personal-trainer-lead',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'none',
+			),
+			array (
+				'key' => 'field_57bc959a117f4',
+				'label' => 'Treningsveiledning: Innhold',
+				'name' => 'personal-trainer-content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '11',
+					'order_no' => 1,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_call-to-actions',
+		'title' => 'Call to actions',
+		'fields' => array (
+			array (
+				'key' => 'field_57bc9d4a6e665',
+				'label' => 'Call to action: Tittel',
+				'name' => 'call-to-action-title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57bc9d696e666',
+				'label' => 'Call to action: Lead',
+				'name' => 'call-to-action-lead',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'none',
+			),
+			array (
+				'key' => 'field_57bc9d846e667',
+				'label' => 'Call to action: Innhold',
+				'name' => 'call-to-action-content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_57bc9d9d6e668',
+				'label' => 'Call to action: Knappetekst',
+				'name' => 'call-to-action-button-text',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_57bc9dba6e669',
+				'label' => 'Call to action: Link',
+				'name' => 'call-to-action-link',
+				'type' => 'page_link',
+				'post_type' => array (
+					0 => 'post',
+					1 => 'page',
+					2 => 'testimonial',
+					3 => 'employee',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 1,
+	));
+}
+
 
 ?>

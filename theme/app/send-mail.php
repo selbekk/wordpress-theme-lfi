@@ -1,5 +1,4 @@
 <?php
-
 // Make sure the request method is POST
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     http_response_code(405);
@@ -9,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 $type = $_POST['type'];
 
-if ($type !== 'contact' || $type !== 'signup') {
+if($type != 'signup' && $type != 'contact') {
     http_response_code(400);
     echo 'Go away please.';
     die();
@@ -31,22 +30,9 @@ $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 $headers .= 'From: '. $_POST['name'] .' <'. $_POST['email'] .'>' . "\r\n";
 
-function create_html($body) {
-    return '<!DOCTYPE html>'.
-            '<html>' .
-                '<head>' .
-                    '<style>body{font-family:sans-serif;font-size:110%;color:#222222;}</style>' .
-                '</head>' .
-                '<body>' .
-                    '<h2>'. $subject .'</h2>' .
-                    $body .
-                '</body>' .
-            '</html>';
-}
-
 $body = '';
 foreach ($_POST as $key => $value) {
-    if($key === 'type') continue; // Skip the type
+    if($key == 'type') continue; // Skip the type
     $body .= "<strong>$key</strong>: $value<br />";
 }
 
@@ -56,7 +42,7 @@ $html = '<!DOCTYPE html><html>'.
             '<style>body{font-family: sans-serif; font-size: 110%; color: #222222; }</style>'.
         '</head><body>'.
         '<p>'.
-            $body
+            $body .
         '</p>'.
         '</body></html>';
 
@@ -71,4 +57,5 @@ else {
     echo "Could not send mail.";
 }
 die();
+
 ?>
