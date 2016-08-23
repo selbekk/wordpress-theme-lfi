@@ -38,9 +38,12 @@
 
         </aside>
 
-        <form class="contact-form js-contact-form"
+        <form
+            class="contact-form js-contact-form"
             method="POST"
-            action="<?php echo get_template_directory_uri() .'/send-mail.php'?>">
+            action="<?php echo get_template_directory_uri() .'/send-mail.php'?>"
+        >
+            <input type="hidden" name="type" value="contact" />
             <div class="form-fields js-form-fields">
                 <div class="form-group">
                     <label class="form-label" for="name">Navn</label>
@@ -63,5 +66,6 @@
             <div class="form-feedback js-form-feedback" data-email="<?php echo $email; ?>"></div>
         </form>
     </div>
+    <?php include 'part-call-to-action.php'; ?>
 
 <?php get_footer(); ?>

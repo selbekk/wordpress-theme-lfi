@@ -3,38 +3,64 @@
 // Make sure the request method is POST
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     http_response_code(405);
-    echo "Hell no.";
+    echo 'Hell no.';
     die();
 }
 
-// Save input as variables
-$name = $_POST['name'];
-$email = $_POST['email'];
-$msg = $_POST['message'];
+$type = $_POST['type'];
+
+if ($type !== 'contact' || $type !== 'signup') {
+    http_response_code(400);
+    echo 'Go away please.';
+    die();
+}
+
+if ($type == 'contact') {
+    $subject = 'Melding fra '. $_POST['name'] .' via LFI.no';
+} else if ($type == 'signup') {
+    $subject = 'Registrering på treningssenteret via LFI.no';
+}
 
 // Super awesome ninja trick.
-$msg = nl2br($msg);
+$msg = nl2br($_POST['message']);
 
 // Set up mail metadata
-$to = 'post@lfi.no';
-$subject = "Melding fra $name via LFI.no";
+//$to = 'post@lfi.no';
+$to = 'selbeezy@gmail.com'; // TODO: REMOVE, DEMO!
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-$headers .= 'From: '. $name .' <'. $email .'>' . "\r\n";
+$headers .= 'From: '. $_POST['name'] .' <'. $_POST['email'] .'>' . "\r\n";
+
+function create_html($body) {
+    return '<!DOCTYPE html>'.
+            '<html>' .
+                '<head>' .
+                    '<style>body{font-family:sans-serif;font-size:110%;color:#222222;}</style>' .
+                '</head>' .
+                '<body>' .
+                    '<h2>'. $subject .'</h2>' .
+                    $body .
+                '</body>' .
+            '</html>';
+}
+
+$body = '';
+foreach ($_POST as $key => $value) {
+    if($key === 'type') continue; // Skip the type
+    $body .= "<strong>$key</strong>: $value<br />";
+}
 
 // Create the HTML mail
-$body = '<!DOCTYPE html><html>'.
+$html = '<!DOCTYPE html><html>'.
         '<head>'.
             '<style>body{font-family: sans-serif; font-size: 110%; color: #222222; }</style>'.
         '</head><body>'.
-            '<h2>'. $subject .'</h2>'.
-            '<p><strong>Navn:</strong> '. $name .'<br />'.
-            '<strong>E-mail:</strong> <a href="mailto:'. $email .'">'. $email . '</a><br />'.
-            '</p>'.
-            '<p>'. $msg .'</p>'.
+        '<p>'.
+            $body
+        '</p>'.
         '</body></html>';
 
-$is_success = mail( $to, $subject, $body, $headers );
+$is_success = mail( $to, $subject, $html, $headers );
 
 if($is_success) {
     http_response_code(200);
