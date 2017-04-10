@@ -21,7 +21,8 @@
 <section class="employees wrapper">
 <?php
     $args = array(
-        'post_type' => 'employee'
+        'post_type' => 'employee',
+        'meta_key' => 'ordre-id'
     );
     $loop = new WP_Query( $args );
     while($loop->have_posts()): $loop->the_post();

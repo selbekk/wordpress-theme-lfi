@@ -39,7 +39,7 @@
                             ?>
                         </ul>
                         <div class="button-group">
-                            <a href="<?php echo get_theme_mod( 'general_booking_url', '/' ); ?>" class="button mod-full-width">
+                            <a href="/timebestilling" class="button mod-full-width">
                                 Bestill time
                             </a>
                             <a href="/kontakt" class="button mod-full-width">
